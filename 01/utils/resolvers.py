@@ -48,8 +48,7 @@ def first_exercise(filename: Path) -> pl.DataFrame:
                 .sum()
                 .alias("result")
             )
-            ["result"]
-            [0]
+            .item()
         )
 
 def second_exercise(filename: Path) -> pl.DataFrame:
@@ -69,6 +68,5 @@ def second_exercise(filename: Path) -> pl.DataFrame:
                 .sum()
                 .alias("result")
             )
-            ["result"]
-            [0]
+            .item()
         )
