@@ -1,21 +1,6 @@
 from pathlib import Path
 
 import polars as pl
-import polars.selectors as cs
-
-
-def _compute_schema_max_cols(filename: Path) -> int:
-    """
-    Computes the maximum number of columns in a CSV file.
-
-    Args:
-        filename (Path): The path to the CSV file to be read.
-
-    Returns:
-        int: The maximum number of columns in the CSV file.
-    """
-    with open(filename) as f:
-        return max(len(line.split()) for line in f)
 
 
 def _read_and_process_csv(filename: Path,
@@ -28,8 +13,7 @@ def _read_and_process_csv(filename: Path,
         as_list (bool): Whether to return the column as a list or not.
 
     Returns:
-        pl.DataFrame: A Polars DataFrame with processed data. The DataFrame
-        contains two columns, 'field_0' and 'field_1', both cast to Int64 type.
+        pl.DataFrame: A Polars DataFrame with processed data.
     """
     df = (
         pl
