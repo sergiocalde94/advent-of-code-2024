@@ -25,17 +25,6 @@ def _read_and_process_csv(filename: Path) -> pl.DataFrame:
 
 
 def first_exercise(filename: Path) -> pl.DataFrame:
-    """
-    Processes a CSV file and computes the absolute difference
-    sum of two columns.
-
-    Args:
-        filename (Path): The path to the CSV file to be processed.
-
-    Returns:
-        pl.DataFrame: A DataFrame containing the result of the absolute
-            difference sum of the two specified columns.
-    """
     df_processed = _read_and_process_csv(filename)
 
     return (
