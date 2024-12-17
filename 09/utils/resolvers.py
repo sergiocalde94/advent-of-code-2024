@@ -35,7 +35,7 @@ def _read_and_process_file(filename: Path) -> list:
         ])
     )
 
-def is_the_rest_empty(disk_map: str) -> bool:
+def _is_the_rest_empty(disk_map: str) -> bool:
     """Checks if the remaining portion of the disk map consists only
     of empty spaces.
 
@@ -51,7 +51,7 @@ def is_the_rest_empty(disk_map: str) -> bool:
 
     return disk_map[-n_empties:] == (["."] * n_empties)
 
-def fill_first_empty_with_last(disk_map: str) -> str:
+def _fill_first_empty_with_last(disk_map: str) -> str:
     """Fills the first empty space in the disk map with the last
     non-empty value.
 
@@ -76,7 +76,7 @@ def fill_first_empty_with_last(disk_map: str) -> str:
             disk_map[i] = EMPTY
             return disk_map
 
-def apply_checksum(disk_map: str) -> int:
+def _apply_checksum(disk_map: str) -> int:
     """Computes a checksum for the disk map.
 
     The checksum is calculated as the sum of `index * value` for all non-empty
@@ -98,10 +98,10 @@ def apply_checksum(disk_map: str) -> int:
 def first_exercise(filename: Path):
     disk_map = _read_and_process_file(filename) + [EMPTY]
 
-    while not is_the_rest_empty(disk_map):
-        disk_map = fill_first_empty_with_last(disk_map)
+    while not _is_the_rest_empty(disk_map):
+        disk_map = _fill_first_empty_with_last(disk_map)
 
-    return apply_checksum(disk_map)
+    return _apply_checksum(disk_map)
 
 def second_exercise(filename: Path, verbose=False):
     disk_map = _read_and_process_file(filename, return_id_count=True)
@@ -123,4 +123,4 @@ def second_exercise(filename: Path, verbose=False):
                 disk_map[index_start:index_end] = [EMPTY] * step
                 break
 
-    return apply_checksum(disk_map)
+    return _apply_checksum(disk_map)
