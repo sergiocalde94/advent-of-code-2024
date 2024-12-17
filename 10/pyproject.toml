@@ -1,0 +1,23 @@
+[project]
+name = "10"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.2.0",
+]
+
+[tool.ruff]
+line-length = 80
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "C", "I", "N", "Q", "S", "T", "UP"]
+ignore = ["S101", "E721", "N803", "N806", "N816", "T201"]
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 40
+quote-style = "double"
+indent-style = "space"
