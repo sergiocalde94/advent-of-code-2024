@@ -1,4 +1,3 @@
-import itertools as it
 from collections import Counter
 from functools import lru_cache, partial
 from pathlib import Path
@@ -37,7 +36,7 @@ def _apply_rules(stone: str) -> str | list:
         stone (str): The stone to apply rules to.
 
     Returns:
-        str | list: A transformed stone value as a string, or a list of strings 
+        str | list: A transformed stone value as a string, or a list of strings
                     if the stone is split.
     """
     if stone == "0":

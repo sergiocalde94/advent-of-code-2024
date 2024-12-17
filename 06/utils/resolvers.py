@@ -17,7 +17,7 @@ TOGGLE_DIRECTION = {
     "<": "^"
 }
 
-def _read_and_process_file(filename: Path) -> list:
+def _read_and_process_file(filename: Path) -> np.array:
     """Reads a file and processes its contents into a padded numpy array representation.
 
     The function converts characters in the file to numerical representations:
