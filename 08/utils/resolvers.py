@@ -60,7 +60,7 @@ def first_exercise(filename: Path):
 
     return len(antinode_positions)
 
-def second_exercise(filename: Path, verbose=False):
+def second_exercise(filename: Path):
     matrix = _read_and_process_file(filename)
     antinode_positions = set()
 

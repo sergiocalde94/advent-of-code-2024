@@ -103,7 +103,7 @@ def first_exercise(filename: Path):
 
     return _apply_checksum(disk_map)
 
-def second_exercise(filename: Path, verbose=False):
+def second_exercise(filename: Path):
     disk_map = _read_and_process_file(filename, return_id_count=True)
 
     file_ids = sorted(

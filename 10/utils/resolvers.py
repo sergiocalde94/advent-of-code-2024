@@ -167,7 +167,7 @@ def first_exercise(filename: Path):
 
     return len(routes_uniques)
 
-def second_exercise(filename: Path, verbose=False):
+def second_exercise(filename: Path):
     topographic_map = _read_and_process_file(filename)
     dict_routes = defaultdict(list)
 

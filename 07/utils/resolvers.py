@@ -127,7 +127,7 @@ def first_exercise(filename: Path):
         operators=list(MAP_OPERATORS.keys())[:2]
     )
 
-def second_exercise(filename: Path, verbose=False):
+def second_exercise(filename: Path):
     equations = _read_and_process_file(filename)
 
     return _solve_equations(
