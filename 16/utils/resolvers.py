@@ -24,12 +24,11 @@ TOGGLE_DIRECTION_RIGHT = {"^": ">", ">": "v", "v": "<", "<": "^"}
 TOGGLE_DIRECTION_LEFT = {"^": "<", "<": "v", "v": ">", ">": "^"}
 
 
-def _read_and_process_file(filename: Path, debug=False) -> tuple:
+def _read_and_process_file(filename: Path) -> tuple:
     """Reads and processes the input maze file into a 2D numpy array.
 
     Args:
         filename (Path): Path to the input file containing the maze.
-        debug (bool, optional): If True, enables debug mode. Defaults to False.
 
     Returns:
         np.array: A 2D numpy array representing the maze.

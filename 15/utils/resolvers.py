@@ -99,7 +99,7 @@ def _widen_map(warehouse: np.array) -> np.array:
 
     return bigger_warehouse
 
-def _apply_movements(warehouse: np.array, movements: str, debug=False) -> int:
+def _apply_movements(warehouse: np.array, movements: str) -> int:
     """Simulates the movements of the robot in the warehouse and calculates
     the GPS sum.
 
@@ -108,7 +108,6 @@ def _apply_movements(warehouse: np.array, movements: str, debug=False) -> int:
     Args:
         warehouse (np.array): A 2D numpy array representing the warehouse.
         movements (str): A string of movement directions.
-        debug (bool, optional): If True, enables debug mode. Defaults to False.
 
     Returns:
         int: The GPS sum of all boxes after applying the movements.

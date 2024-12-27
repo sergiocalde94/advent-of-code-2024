@@ -106,13 +106,12 @@ OPCODES = {
 COMBO_OPCODES = {0, 2, 5, 6, 7}
 
 
-def _read_and_process_file(filename: Path, debug=False) -> tuple:
+def _read_and_process_file(filename: Path) -> tuple:
     """Reads and processes the input file into registers and program
     instructions.
 
     Args:
         filename (Path): Path to the input file.
-        debug (bool, optional): If True, enables debug mode. Defaults to False.
 
     Returns:
         tuple: A tuple containing:
