@@ -104,7 +104,7 @@ def first_exercise(filename: Path):
     return _apply_checksum(disk_map)
 
 def second_exercise(filename: Path):
-    disk_map = _read_and_process_file(filename, return_id_count=True)
+    disk_map = _read_and_process_file(filename)
 
     file_ids = sorted(
         set(filter(lambda x: x != EMPTY, disk_map)),
